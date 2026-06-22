@@ -9,13 +9,13 @@
 
 도서·보고서·오피스 문서 등 다양한 형태의 스캔 문서를 입력받아, 문서 내 텍스트·표·이미지 영역을 자동으로 구분하고 구조화된 JSON으로 변환합니다. 단순 텍스트 추출에 그치는 기존 OCR과 달리, 표의 셀 구조와 이미지 영역까지 보존하여 원본 문서의 레이아웃을 최대한 유지하는 데 중점을 둡니다.
 
-이후, PaddleOCR 기반의 PDF 문서 분석 GUI 애플리케이션까지 제작했습니다.
+이후, PaddleOCR 기반의 PDF 문서 분석 GUI 배포 패키지까지 제작했습니다.
 
-## 방법론
+## 실험 방법론
 
 ### 1. 베이스 모델: PPStructureV3
 
-초기에는 독자적인 커스텀 레이아웃 분류 모델 개발을 계획했으나, PaddleOCR 기반 PPStructureV3의 높은 정확도를 확인하고 **PPStructureV3를 baseline으로 채택 + 보조 CNN으로 재교정하는 파이프라인**으로 전략을 전환했습니다.
+초기에는 독자적인 커스텀 레이아웃 분류 모델 개발을 계획했으나, PaddleOCR 기반 PPStructureV3의 높은 정확도를 확인하고 PPStructureV3를 baseline으로 채택 + 보조 CNN으로 재교정하는 파이프라인으로 전략을 전환했습니다
 
 ### 2. 2-pass OCR (CER 개선)
 
@@ -133,6 +133,10 @@ PDFStructureResults/
 
 → PPStructureV3가 이미 충분히 정확하여 보정 모델의 추가 개선 효과는 제한적이었습니다.
 
+### GUI 패키지 실행 결과
+<img width="561" height="448" alt="image" src="https://github.com/user-attachments/assets/63c4a2ed-9874-4179-a31f-dcae922bb1c6" />
+
+
 ## 팀원
 
 | 이름 | 역할 |
@@ -141,4 +145,4 @@ PDFStructureResults/
 | 송성준 | 전체 OCR Parser 개발 |
 | 임시은 | Windows 타겟 패키징 |
 | 조수빈 | Windows 타겟 패키징 |
-| 손혜강 | - |
+| 손혜강 | 자문 |
