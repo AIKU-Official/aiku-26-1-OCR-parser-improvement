@@ -1,4 +1,5 @@
-# aiku-26-1-OCR-parser-function-improvement: OCR 기반 문서 구조 분석 파이프라인
+# aiku-26-1-OCR-parser-function-improvement
+    : OCR 기반 문서 구조 증진 시도 파이프라인 및 배포 패키지 제작
 > 📢 **2026년 1학기 AIKU 활동으로 진행한 프로젝트입니다**
 
 ## 소개
