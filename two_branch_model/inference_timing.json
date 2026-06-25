@@ -1,0 +1,20 @@
+{
+  "warmup_batches_excluded": 1,
+  "timed_samples": 791,
+  "timed_batches": 13,
+  "batch_size": 64,
+  "two_feature_branches_seconds": 0.9062476120889187,
+  "fusion_classifier_seconds": 0.016243018675595522,
+  "full_model_forward_seconds": 0.9224906307645142,
+  "end_to_end_with_crop_preprocessing_seconds": 31.593092455994338,
+  "two_feature_branches_ms_per_sample": 1.1456986246383296,
+  "fusion_classifier_ms_per_sample": 0.020534789728945034,
+  "full_model_ms_per_sample": 1.1662334143672746,
+  "full_model_images_per_second": 857.4612832050757,
+  "end_to_end_ms_per_sample": 39.94069842730005,
+  "end_to_end_images_per_second": 25.037118512591796,
+  "branch_batch_latency_ms_mean": 69.71135477607066,
+  "branch_batch_latency_ms_p50": 57.66418622806668,
+  "branch_batch_latency_ms_p95": 147.29408742859943,
+  "device": "gpu:0"
+}

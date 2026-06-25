@@ -1,0 +1,11 @@
+{
+  "dual_checkpoint": "output_aihub_news/gt_crop_dual_branch_news_2000_dual_p/dual_fusion5/best_model.pdparams",
+  "cnn_checkpoint": "output_aihub_news_report/gt_crop_3class_adaptive_hsv_s_morph_opening_hough_cnn_all_cnn_np/adaptive_hsv_s_morph_opening_hough/best_model.pdparams",
+  "cnn_run_config": "output_aihub_news_report/gt_crop_3class_adaptive_hsv_s_morph_opening_hough_cnn_all_cnn_np/run_config.json",
+  "output": "output_aihub_news_report/transplanted_news_mobilenet_adaptive_hsv_s_hough_cnn_test",
+  "device": "gpu:0",
+  "batch_size": 64,
+  "num_workers": 4,
+  "classifier_epochs": 15,
+  "classifier_lr": 0.001
+}

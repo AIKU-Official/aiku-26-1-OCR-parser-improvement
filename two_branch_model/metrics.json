@@ -1,0 +1,84 @@
+{
+  "experiment_type": "frozen_branch_transplant_with_new_fusion_classifier",
+  "dual_checkpoint": "output_aihub_news/gt_crop_dual_branch_news_2000_dual_p/dual_fusion5/best_model.pdparams",
+  "mobilenet_source": "dual checkpoint RGB branch",
+  "fusion_classifier_source": "newly initialized and trained on frozen branch features",
+  "cnn_checkpoint": "output_aihub_news_report/gt_crop_3class_adaptive_hsv_s_morph_opening_hough_cnn_all_cnn_np/adaptive_hsv_s_morph_opening_hough/best_model.pdparams",
+  "cnn_source": "3-channel BasicCNN backbone; original standalone classifier excluded",
+  "channels": [
+    "rgb_b",
+    "rgb_g",
+    "rgb_r",
+    "adaptive",
+    "hsv_s",
+    "morph_opening_hough"
+  ],
+  "dataset": [
+    "news",
+    "report"
+  ],
+  "image_size": 224,
+  "test_max_per_class_replay": 500,
+  "val_max_per_class_replay": 500,
+  "classifier_epochs": 15,
+  "classifier_lr": 0.001,
+  "best_val_accuracy": 1.0,
+  "metrics": {
+    "loss": 0.031657041861914766,
+    "accuracy": 0.9848293299620733,
+    "samples": 791,
+    "text_precision": 0.9979959919839679,
+    "text_recall": 0.996,
+    "text_f1": 0.9969969969969971,
+    "text_support": 500,
+    "table_precision": 0.9041095890410958,
+    "table_recall": 0.9428571428571428,
+    "table_f1": 0.923076923076923,
+    "table_support": 70,
+    "image_precision": 0.9817351598173516,
+    "image_recall": 0.9728506787330317,
+    "image_f1": 0.9772727272727273,
+    "image_support": 221
+  },
+  "confusion": [
+    [
+      498,
+      1,
+      1
+    ],
+    [
+      1,
+      66,
+      3
+    ],
+    [
+      0,
+      6,
+      215
+    ]
+  ],
+  "component_parameter_keys": {
+    "mobilenet_branch": 210,
+    "adaptive_cnn_backbone": 20
+  },
+  "inference_timing": {
+    "warmup_batches_excluded": 1,
+    "timed_samples": 791,
+    "timed_batches": 13,
+    "batch_size": 64,
+    "two_feature_branches_seconds": 0.9062476120889187,
+    "fusion_classifier_seconds": 0.016243018675595522,
+    "full_model_forward_seconds": 0.9224906307645142,
+    "end_to_end_with_crop_preprocessing_seconds": 31.593092455994338,
+    "two_feature_branches_ms_per_sample": 1.1456986246383296,
+    "fusion_classifier_ms_per_sample": 0.020534789728945034,
+    "full_model_ms_per_sample": 1.1662334143672746,
+    "full_model_images_per_second": 857.4612832050757,
+    "end_to_end_ms_per_sample": 39.94069842730005,
+    "end_to_end_images_per_second": 25.037118512591796,
+    "branch_batch_latency_ms_mean": 69.71135477607066,
+    "branch_batch_latency_ms_p50": 57.66418622806668,
+    "branch_batch_latency_ms_p95": 147.29408742859943,
+    "device": "gpu:0"
+  }
+}
